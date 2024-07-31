@@ -18,14 +18,17 @@ const siteConfig = {
       {
         id: "features",
         label: "Features",
+        href: "/features", // Add href here
       },
       {
         id: "pricing",
         label: "Pricing",
+        href: "/pricing", // Add href here
       },
       {
         id: "faq",
         label: "FAQ",
+        href: "/faq", // Add href here
       },
     ],
   },

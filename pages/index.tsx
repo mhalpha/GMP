@@ -214,7 +214,7 @@ const HighlightsSection = () => {
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
             Dive into a wealth of resources designed to accelerate your trading
-            skills.<Em>From beginner tutorials to advanced strategies</Em> , we
+            skills.<Em>From beginner tutorials to advanced strategies</Em>, we
             cover it all. Benefit from live classes, recorded sessions, and
             curated materials to guide your trading journey.
           </Text>
@@ -233,19 +233,19 @@ const HighlightsSection = () => {
         avatar="/static/images/avatar.jpg"
         gradient={["pink.200", "purple.500"]}
       >
-        “At GMP, we're more than just a community—we're a family of traders
-        committed to mastering futures indices together. With expert guidance,
-        live classes, and a supportive environment, we're here to help you
-        succeed in your trading journey.”
+        “At GMP, we&apos;re more than just a community—we&apos;re a family of
+        traders committed to mastering futures indices together. With expert
+        guidance, live classes, and a supportive environment, we&apos;re here to
+        help you succeed in your trading journey.”
       </HighlightsTestimonialItem>
       <HighlightsItem
         colSpan={[1, null, 2]}
         title="Start Your Trading Journey Two Steps Ahead"
       >
         <Text color="muted" fontSize="lg">
-          We’ve set up everything you need to start trading smarter and faster.
-          Focus on mastering the markets while we provide the tools and support
-          you need to succeed.
+          We&apos;ve set up everything you need to start trading smarter and
+          faster. Focus on mastering the markets while we provide the tools and
+          support you need to succeed.
         </Text>
         <Wrap mt="8">
           {[
@@ -290,7 +290,7 @@ const FeaturesSection = () => {
       }
       description={
         <>
-          At GMP, we've curated everything you need to succeed in futures
+          At GMP, we&apos;ve curated everything you need to succeed in futures
           trading.
           <Br />
           From comprehensive resources to advanced tools, our platform is
