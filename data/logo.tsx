@@ -12,7 +12,7 @@ export const Logo: React.FC<React.ComponentPropsWithoutRef<"img">> = (
     <chakra.img
       src={logoSrc}
       alt="GMP Logo"
-      width="90px" // Adjust to your desired width
+      width="60px" // Adjust to your desired width
       height="50px" // Adjust to your desired height
       {...props} // Forward all other props, including onClick
     />

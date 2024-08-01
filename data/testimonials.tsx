@@ -3,7 +3,7 @@ export default {
   items: [
     {
       name: "kadeshia",
-      description: "Founder Saas UI",
+      description: "GMP Mentee",
       avatar:
         "https://pbs.twimg.com/profile_images/1470742164024008706/k-eXHtu0_normal.jpg",
       children: (
@@ -16,7 +16,7 @@ export default {
     },
     {
       name: "itsmike1",
-      description: "Fullstack Developer",
+      description: "GMP Mentee",
       avatar: "/static/images/avatar2.jpg",
       children: (
         <>
@@ -28,7 +28,7 @@ export default {
     },
     {
       name: "zolliet",
-      description: "Frontend Engineer",
+      description: "GMP Mentee",
       avatar: "/static/images/avatar3.jpg",
       children: (
         <>

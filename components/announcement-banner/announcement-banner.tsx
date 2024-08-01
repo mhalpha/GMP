@@ -5,15 +5,13 @@ import {
   Flex,
   HStack,
   Icon,
-  LinkBox,
-  LinkOverlay,
   useColorModeValue,
   Button,
+  keyframes,
 } from "@chakra-ui/react";
 import {
   Banner,
   BannerActions,
-  BannerContent,
   BannerDescription,
   BannerTitle,
 } from "@saas-ui/react";
@@ -34,6 +32,19 @@ export const AnnouncementBanner: React.FC<AnnouncementBannerProps> = (
   if (!title) {
     return null;
   }
+
+  // Define the keyframes for the gradient animation
+  const animateGradient = keyframes`
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  `;
 
   return (
     <Flex position="absolute" zIndex="10" top="100px" width="100%">
@@ -68,10 +79,13 @@ export const AnnouncementBanner: React.FC<AnnouncementBannerProps> = (
                 left: 0,
                 borderRadius: "inherit",
                 margin: "-2px",
-                bgGradient: "linear(to-r, purple.500, cyan.500)",
+                bgGradient: "linear(to-r, #ff7e5f, #feb47b, #86a8e7, #91eae4)", // Brighter gradient colors
+                backgroundSize: "200% 200%",
+                animation: `${animateGradient} 3s linear infinite`,
                 transition: "background .2s ease-out",
                 _dark: {
-                  bgGradient: "linear(to-r, purple.500, cyan.500)",
+                  bgGradient:
+                    "linear(to-r, #ff7e5f, #feb47b, #86a8e7, #91eae4)", // Brighter gradient colors for dark mode
                 },
               }}
               _hover={{
