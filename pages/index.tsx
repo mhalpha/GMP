@@ -109,7 +109,11 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 40, lg: 60 }} pb="40">
+      <Container
+        maxW="container.xl"
+        pt={{ base: 20, lg: 60 }}
+        pb={{ base: 16, lg: 40 }}
+      >
         <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
             <Hero
@@ -130,26 +134,44 @@ const HeroSection: React.FC = () => {
                   <Br /> futures indices with live classes and expert guidance.
                 </FallInPlace>
               }
-            >
-              <FallInPlace delay={0.8}>
-                <HStack pt="4" pb="12" spacing="8"></HStack>
+            />
 
-                <ButtonGroup spacing={4} alignItems="center">
-                  <ButtonLink
-                    colorScheme="primary"
-                    size="lg"
-                    href="https://whop.com/gray-matter-profits/?d2c=true&directPlanId=plan_LrPXO90yDMoPi&pass=prod_4LGcalbAJ5MTW&a=user5c1a1836007"
-                  >
-                    Start Free Trial
-                  </ButtonLink>
-                </ButtonGroup>
-              </FallInPlace>
-            </Hero>
+            {/* Display the hero image below the heading and description on small screens */}
+            <Box
+              display={{ base: "block", lg: "none" }} // Show on small screens, hide on large screens
+              mt="8" // Add margin above the image
+            >
+              <Image
+                src="/static/screenshots/discorddm.png"
+                layout="responsive"
+                width={1200}
+                height={762}
+                alt="Screenshot of a ListPage in Saas UI Pro"
+                quality="75"
+                priority
+              />
+            </Box>
+
+            <FallInPlace delay={0.8}>
+              <HStack pt="4" pb="12" spacing="8"></HStack>
+
+              <ButtonGroup spacing={4} alignItems="center">
+                <ButtonLink
+                  colorScheme="primary"
+                  size="lg"
+                  href="https://whop.com/gray-matter-profits/?d2c=true&directPlanId=plan_LrPXO90yDMoPi&pass=prod_4LGcalbAJ5MTW&a=user5c1a1836007"
+                >
+                  Start Free Trial
+                </ButtonLink>
+              </ButtonGroup>
+            </FallInPlace>
           </motion.div>
+
+          {/* Existing hero image for large screens */}
           <Box
             height="600px"
             position="absolute"
-            display={{ base: "none", lg: "block" }}
+            display={{ base: "none", lg: "block" }} // Hide on small screens, show on large screens
             left={{ lg: "60%", xl: "55%" }}
             width="80vw"
             maxW="1100px"
@@ -178,7 +200,7 @@ const HeroSection: React.FC = () => {
           columns={[1, 2, 4]}
           iconSize={4}
           innerWidth="container.xl"
-          pt="20"
+          pt={{ base: 8, lg: 20 }} // Reduce gap on smaller screens
           features={[
             {
               title: "Supportive Community",
