@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 40, lg: 60 }} pb="40">
+      <Container maxW="container.xl" pt={{ base: 20, lg: 60 }} pb="20">
         <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
             <Hero
@@ -151,7 +151,7 @@ const HeroSection: React.FC = () => {
               <ButtonGroup
                 spacing={4}
                 alignItems="center"
-                mt={{ base: 16, lg: 3 }} // Adjust margin top for larger screens
+                mt={{ base: 8, lg: 3 }}
                 ml={{ lg: "16px" }}
               >
                 <ButtonLink
@@ -245,7 +245,7 @@ const HighlightsSection = () => {
 
   return (
     <motion.div initial="hidden" whileInView="visible" variants={fadeInUp}>
-      <Highlights>
+      <Highlights pt={{ base: 4, lg: 8 }}>
         <HighlightsItem
           colSpan={[1, null, 2]}
           title="Comprehensive Learning Resources"
@@ -342,6 +342,7 @@ const FeaturesSection = () => {
         align="left"
         columns={[1, 2, 3]}
         iconSize={4}
+        pt={{ base: 4, lg: 0 }}
         features={[
           {
             title: "Community.",
@@ -430,6 +431,7 @@ const TestimonialsSection = () => {
         title={testimonials.title}
         columns={[1, 2, 3]}
         innerWidth="container.xl"
+        pt={{ base: 4, lg: 8 }}
       >
         <>
           {columns.map((column, i) => (
@@ -448,7 +450,7 @@ const TestimonialsSection = () => {
 const PricingSection = () => {
   return (
     <motion.div initial="hidden" whileInView="visible" variants={fadeInUp}>
-      <Pricing {...pricing}>
+      <Pricing {...pricing} p={{ base: 4, lg: 8 }}>
         <Text p="8" textAlign="center" color="muted">
           VAT may be applicable depending on your location.
         </Text>
@@ -460,7 +462,7 @@ const PricingSection = () => {
 const FaqSection = () => {
   return (
     <motion.div initial="hidden" whileInView="visible" variants={fadeInUp}>
-      <Faq {...faq} />
+      <Faq {...faq} pt={{ base: 4, lg: 8 }} />
     </motion.div>
   );
 };
