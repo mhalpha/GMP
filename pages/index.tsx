@@ -125,7 +125,7 @@ const HeroSection: React.FC = () => {
                   size="lg"
                   href="https://whop.com/gray-matter-profits/?d2c=true&directPlanId=plan_LrPXO90yDMoPi&pass=prod_4LGcalbAJ5MTW&a=user5c1a1836007"
                 >
-                  Get Started
+                  Start Free Trial
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>

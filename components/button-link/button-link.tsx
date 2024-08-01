@@ -9,8 +9,10 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
   ...props
 }) => {
   return (
-    <NextLink href={href} passHref>
-      <Button {...props}>{children}</Button>
+    <NextLink href={href} passHref legacyBehavior>
+      <a target="_blank" rel="noopener noreferrer">
+        <Button {...props}>{children}</Button>
+      </a>
     </NextLink>
   );
 };

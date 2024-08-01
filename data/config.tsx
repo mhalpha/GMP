@@ -18,24 +18,21 @@ const siteConfig = {
       {
         id: "features",
         label: "Features",
-        href: "/features", // Add href here
       },
       {
         id: "pricing",
         label: "Pricing",
-        href: "/pricing", // Add href here
       },
       {
         id: "faq",
         label: "FAQ",
-        href: "/faq", // Add href here
       },
     ],
   },
   footer: {
     links: [
       {
-        href: "mailto:hello@saas-ui.dev",
+        href: "mailto:teddy@gmp.co",
         label: "Contact",
       },
       {

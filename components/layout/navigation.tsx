@@ -1,18 +1,12 @@
 import * as React from "react";
 import { HStack } from "@chakra-ui/react";
-
 import { useRouter } from "next/router";
-
 import siteConfig from "data/config";
-
 import { NavLink } from "components/nav-link";
-
 import { useScrollSpy } from "hooks/use-scrollspy";
-
 import { MobileNavButton } from "components/mobile-nav";
 import { MobileNavContent } from "components/mobile-nav";
 import { useDisclosure, useUpdateEffect } from "@chakra-ui/react";
-
 import ThemeToggle from "./theme-toggle";
 
 const Navigation: React.FC = () => {
@@ -35,21 +29,17 @@ const Navigation: React.FC = () => {
 
   return (
     <HStack spacing="2" flexShrink={0}>
-      {siteConfig.header.links.map(({ href, id, ...props }, i) => {
+      {siteConfig.header.links.map(({ id, label }, i) => {
+        const isActive = id && activeId === id; // Explicitly set a boolean value
+
         return (
           <NavLink
             display={["none", null, "block"]}
-            href={href || `/#${id}`}
+            href={`/#${id}`} // Use id for scrolling
             key={i}
-            isActive={
-              !!(
-                (id && activeId === id) ||
-                (href && !!router.asPath.match(new RegExp(href)))
-              )
-            }
-            {...props}
+            isActive={!!isActive} // Ensure isActive is boolean
           >
-            {props.label}
+            {label}
           </NavLink>
         );
       })}
