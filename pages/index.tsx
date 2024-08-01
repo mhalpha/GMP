@@ -25,7 +25,6 @@ import { FallInPlace } from "components/motion/fall-in-place";
 import { Hero } from "components/hero";
 import { Link, Br } from "@saas-ui/react";
 import { Em } from "components/typography";
-import { NextjsLogo, ChakraLogo } from "components/logos";
 import {
   FiUsers,
   FiAward,
@@ -109,11 +108,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container
-        maxW="container.xl"
-        pt={{ base: 20, lg: 60 }}
-        pb={{ base: 16, lg: 40 }}
-      >
+      <Container maxW="container.xl" pt={{ base: 40, lg: 60 }} pb="40">
         <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
             <Hero
@@ -153,9 +148,12 @@ const HeroSection: React.FC = () => {
             </Box>
 
             <FallInPlace delay={0.8}>
-              <HStack pt="4" pb="12" spacing="8"></HStack>
-
-              <ButtonGroup spacing={4} alignItems="center">
+              <ButtonGroup
+                spacing={4}
+                alignItems="center"
+                mt={{ base: 16, lg: 3 }} // Adjust margin top for larger screens
+                ml={{ lg: "16px" }}
+              >
                 <ButtonLink
                   colorScheme="primary"
                   size="lg"
@@ -200,7 +198,7 @@ const HeroSection: React.FC = () => {
           columns={[1, 2, 4]}
           iconSize={4}
           innerWidth="container.xl"
-          pt={{ base: 8, lg: 20 }} // Reduce gap on smaller screens
+          pt="20"
           features={[
             {
               title: "Supportive Community",
