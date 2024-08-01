@@ -139,7 +139,7 @@ const HeroSection: React.FC = () => {
             {/* Display the hero image below the heading and description on small screens */}
             <Box
               display={{ base: "block", lg: "none" }} // Show on small screens, hide on large screens
-              mt="8" // Add margin above the image
+              mt="0" // Add margin above the image
             >
               <Image
                 src="/static/screenshots/discorddm.png"
