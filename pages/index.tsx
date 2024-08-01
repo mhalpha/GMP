@@ -182,7 +182,7 @@ const HeroSection: React.FC = () => {
                   layout="fixed"
                   width={1200}
                   height={762}
-                  alt="Screenshot of a ListPage in Saas UI Pro"
+                  alt="Screenshot of a discord server"
                   quality="75"
                   priority
                 />
@@ -198,7 +198,7 @@ const HeroSection: React.FC = () => {
           columns={[1, 2, 4]}
           iconSize={4}
           innerWidth="container.xl"
-          pt="20"
+          pt="0"
           features={[
             {
               title: "Supportive Community",
