@@ -49,7 +49,7 @@ const LandingPage: NextPage = () => {
             fontWeight="semibold"
           >
             Learn how our simple strategies could double or triple your trading
-            win rate while using other people's money.
+            win rate while using other people&apos;s money.
           </Heading>
           <Text
             fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
@@ -57,11 +57,11 @@ const LandingPage: NextPage = () => {
           >
             Even if you bought countless courses.
             <br />
-            Even if you've unsuccessfully copied live traders’ trades.
+            Even if you&apos;ve unsuccessfully copied live traders&apos; trades.
             <br />
-            Even if you've failed at using overpriced alert services.
+            Even if you&apos;ve failed at using overpriced alert services.
             <br />
-            Even if you've lost countless trading accounts.
+            Even if you&apos;ve lost countless trading accounts.
           </Text>
           <Text
             fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
@@ -118,6 +118,7 @@ const LandingPage: NextPage = () => {
             ))}
           </>
         </Testimonials>
+
         <Box py={10}>
           <HighlightsTestimonialItem
             name="GMP Teddy"
@@ -125,10 +126,10 @@ const LandingPage: NextPage = () => {
             avatar="/static/images/avatar.jpg"
             gradient={["pink.200", "purple.500"]}
           >
-            “At GMP, we&apos;re more than just a community—we&apos;re a family
-            of traders committed to mastering futures indices together. With
-            expert guidance, live classes, and a supportive environment,
-            we&apos;re here to help you succeed in your trading journey.”
+            &quot;At GMP, we&apos;re more than just a community—we&apos;re a
+            family of traders committed to mastering futures indices together.
+            With expert guidance, live classes, and a supportive environment,
+            we&apos;re here to help you succeed in your trading journey.&quot;
           </HighlightsTestimonialItem>
         </Box>
       </Container>
